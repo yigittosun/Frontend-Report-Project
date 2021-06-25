@@ -1,0 +1,24 @@
+<ion-header  [translucent]="true">
+  <ion-toolbar>
+    <ion-title></ion-title>
+      <form action="" class="search-bar">  
+        <input type="search" name="search" (keyup)='filterDatatable($event)' pattern=".*\S.*" required>
+        <button class="search-btn" type="submit"></button>
+      </form>
+      <a routerLink= "/charts" >Switch Chart!</a>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ngx-datatable #table [rows]="mock" [ngClass]="tableStyle" [rowHeight]="'auto'"  [headerHeight]="43" [columnMode]="'force'">
+    <ngx-datatable-column name="Date"></ngx-datatable-column>
+    <ngx-datatable-column name="Impressions"></ngx-datatable-column>
+    <ngx-datatable-column name="Clicks"></ngx-datatable-column>
+    <ngx-datatable-column name="Installs"></ngx-datatable-column>
+    <ngx-datatable-column name="Dau"></ngx-datatable-column>
+    <ngx-datatable-column name="Revenue"></ngx-datatable-column>
+    <ngx-datatable-column name="Platform"></ngx-datatable-column>
+    <ngx-datatable-column name="App"></ngx-datatable-column>
+  </ngx-datatable>
+</ion-content>
+

@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title></ion-title>
+      <form action="" class="search-bar">  
+        <input type="search" name="search" (keyup)='filterDatatable($event)' pattern=".*\S.*" required>
+        <button class="search-btn" type="submit"></button>
+      </form>
+      <a routerLink= "/home" >Switch Table!</a>
+  </ion-toolbar>
+</ion-header>
+<br>
+<ion-content [fullscreen]="true">
+  <div class="ion-padding">
+
+    <ion-card >
+      <ion-card-header>
+        Line Chart
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #lineCanvas style="position: relative; height:20vh; width:40vw"></canvas>
+      </ion-card-content>
+    </ion-card>
+<br>
+
+<ion-card>
+  <ion-card-header>
+    Doughnut Chart
+  </ion-card-header>
+  <ion-card-content>
+    <canvas #lineChart>{{ chart }}</canvas>
+  </ion-card-content>
+</ion-card>
+
+  </div>
+</ion-content>
